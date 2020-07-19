@@ -8,7 +8,7 @@ import Articles from './comps/Article/Articles';
 export default function App() {
     
     return (
-        <div className="block w-screen h-screen bg-gray-100">
+        <div className="block w-screen h-screen bg-gray-100 pt-16">
             <BrowserRouter>
                 <Header />
                 

@@ -4,7 +4,7 @@ import NavLink from './NavLink'
 export default function Navigation() {
 
     const isLoggedIn = false;
-    let navClass = `text-blue-500 py-3 md:py-2 lg:py-1 block pl-3`
+    let navClass = `text-blue-500 py-1 block pl-3`
 
     const navItems = [
         { id:"home", title:"Home", link: "/", hasLogin:true },

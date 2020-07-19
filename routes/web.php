@@ -21,5 +21,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/{path?}', function($path = null){
     return view('main');
-})->where('path', '.*'); 
+})->where('path', '^(?!api).*'); 
 

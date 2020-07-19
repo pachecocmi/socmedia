@@ -3,8 +3,9 @@ import Navigation from './Navigation'
 
 export default function Header() {
     return (
-        <div className="w-full">
+        <header className="border-b p-3 flex justify-between items-center bg-white">
+            <span className="font-bold">Title</span>
             <Navigation />
-        </div>
+        </header>
     )
 }

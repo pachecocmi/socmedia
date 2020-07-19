@@ -1,16 +1,32 @@
 import React from 'react'
+import NavLink from './NavLink'
 
 export default function Navigation() {
 
-    let items = [
-        {id:"home", title:"Home", link:"/"},
-        {id:"login", title:"Login", link:"/login"},
-        {id:"register", title:"Register", link:"/register"},
+    const isLoggedIn = false;
+    let navClass = `text-blue-500 py-3 md:py-2 lg:py-1 block pl-3`
+
+    const navItems = [
+        { id:"home", title:"Home", link: "/", hasLogin:true },
+        { id:"profile", title:"Profile", link: "/profile", hasLogin:true },
+        { id:"login", title:"Login", link: "/login", hasLogin:false },
+        { id:"register", title:"Register", link: "/register", hasLogin:false }
     ]
 
+    const navList = navItems.map(each=>{
+        if( isLoggedIn == each.hasLogin ) {
+            return <li key={each.id}>
+                <NavLink params={each} key={each.id} 
+                    className={`${navClass}`} 
+                />
+            </li>
+        }
+    })
+
+
     return (
-        <div>
-            
-        </div>
+        <nav>
+            <ul className="flex">{ navList }</ul>
+        </nav>
     )
 }
